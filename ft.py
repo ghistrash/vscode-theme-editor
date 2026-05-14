@@ -63,7 +63,7 @@ def main():
 
 
 
-# 1 step: generate updating html to open it in a browser,
+# step 1: generate updating html to open it in a browser,
 # change colors and save as html again
 def make_updating_html(theme_path):
     colors = parse_theme_colors(read(theme_path))
@@ -73,7 +73,7 @@ def make_updating_html(theme_path):
     write(updating_html_path(theme_path), html)
 
 
-# 2 step: read updating html from step-1, read original theme,
+# step 3: read updating html from step-1, read original theme,
 # replace now colors in it by new, save with the same name.
 def update_theme(theme_path):
     updating_html = read(updating_html_path(theme_path))
