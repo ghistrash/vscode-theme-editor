@@ -91,6 +91,9 @@ def updating_html_path(theme_path):
 
 
 def parse_theme_colors(text):
+    start = text.find('tokens": [')
+    text = text[start:]
+
     return sorted([c.upper() for c in set( re.findall(HEX, text))])
 
 
